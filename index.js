@@ -53,11 +53,16 @@ app.use(cors(
 
 app.get("/auth/google", passport.authenticate("google",{scope:['profile']}))
 
-app.get("/auth/google/callback", passport.authenticate("google",{
-    successRedirect: CLIENT_URL,
-    //successRedirect: "/successfully/",
-    failureRedirect: "/login/failed"
-}))
+// app.get("/auth/google/callback", passport.authenticate("google",{
+//     successRedirect: CLIENT_URL,
+//     //successRedirect: "/successfully/",
+//     failureRedirect: "/login/failed"
+// }))
+app.get('/auth/google/callback',
+  passport.authenticate('google', { failureRedirect: '/login/failed', session: true }),
+  function (req, res) {
+    res.redirect(CLIENT_URL);
+  });
 
 app.get("/",(req,res)=>{
     res.send("Authentication server working fine");
