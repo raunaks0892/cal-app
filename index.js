@@ -13,15 +13,23 @@ const port = "3004";
 const CLIENT_URL = "http://localhost:3000/calendar";
 const CLIENT_LOGIN = "http://localhost:3000";
 
+const CLIENT_URL_SERVER = "";
+const CLIENT_LOGIN_SERVER = "";
+
 dotenv.config();
 
 console.log('hello');
+
+app.set("trust proxy", 1);
 
 app.use(cookieSession(
     {
         name:"session",
         keys: ['calendar'],
-        maxAge: 24*60*60*100
+        maxAge: (24*60*60*1000)*7,//one week
+        sameSite: "none",
+        secure: true
+        
     }
 ))
 
