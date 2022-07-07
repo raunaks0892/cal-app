@@ -86,6 +86,6 @@ app.get("/auth/getUser",(req,res)=>{
     res.send(req.user);
 })
 
-app.listen(process.env.port || port,()=>{
+app.listen(process.env.PORT || port,()=>{
     console.log(`Server is listing at port ${port}`);
 })
