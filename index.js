@@ -37,7 +37,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(cors(
     {
-    origin: ["http://localhost:3000", "https://62c7d40e90d2434bda6278e3--lively-otter-b22b3d.netlify.app"],
+    origin: ["http://localhost:3000", "https://lively-otter-b22b3d.netlify.app"],
     method: "GET,POST,PUT,DELETE",
     credentials: true
 }
