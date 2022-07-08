@@ -13,8 +13,8 @@ const port = "3004";
 const CLIENT_URL = "http://localhost:3000/calendar";
 const CLIENT_LOGIN = "http://localhost:3000";
 
-const CLIENT_URL_SERVER = "";
-const CLIENT_LOGIN_SERVER = "";
+const CLIENT_URL_SERVER = "https://62c7d40e90d2434bda6278e3--lively-otter-b22b3d.netlify.app/calendar";
+const CLIENT_LOGIN_SERVER = "https://62c7d40e90d2434bda6278e3--lively-otter-b22b3d.netlify.app";
 
 dotenv.config();
 
@@ -37,7 +37,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(cors(
     {
-    origin: ["http://localhost:3000", "https://95cc-2405-204-51ad-5afe-a540-d9a9-e056-cfd1.eu.ngrok.io"],
+    origin: ["http://localhost:3000", "https://62c7d40e90d2434bda6278e3--lively-otter-b22b3d.netlify.app"],
     method: "GET,POST,PUT,DELETE",
     credentials: true
 }
@@ -61,7 +61,8 @@ app.get("/auth/google", passport.authenticate("google",{scope:['profile']}))
 app.get('/auth/google/callback',
   passport.authenticate('google', { failureRedirect: '/login/failed', session: true }),
   function (req, res) {
-    res.redirect(CLIENT_URL);
+    //res.redirect(CLIENT_URL);
+    res.redirect(CLIENT_URL_SERVER);
   });
 
 app.get("/",(req,res)=>{
@@ -91,7 +92,8 @@ app.get("/login/failed",(req,res)=>{
 
 app.get("/logout",(req,res)=>{
     req.logOut();
-    res.redirect(CLIENT_LOGIN);
+    //res.redirect(CLIENT_LOGIN);
+    res.redirect(CLIENT_LOGIN_SERVER);
 })
 
 app.get("/auth/getUser",(req,res)=>{
