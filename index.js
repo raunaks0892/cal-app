@@ -13,8 +13,8 @@ const port = "3004";
 const CLIENT_URL = "http://localhost:3000/calendar";
 const CLIENT_LOGIN = "http://localhost:3000";
 
-const CLIENT_URL_SERVER = "https://62c7d40e90d2434bda6278e3--lively-otter-b22b3d.netlify.app/calendar";
-const CLIENT_LOGIN_SERVER = "https://62c7d40e90d2434bda6278e3--lively-otter-b22b3d.netlify.app";
+const CLIENT_URL_SERVER = "https://lively-otter-b22b3d.netlify.app/calendar";
+const CLIENT_LOGIN_SERVER = "https://lively-otter-b22b3d.netlify.app";
 
 dotenv.config();
 
