@@ -15,9 +15,9 @@ const CLIENT_LOGIN = "http://localhost:3000";
 const CLIENT_CORS = "http://localhost:3000";
 
 
-const CLIENT_URL_SERVER = "https://62d1d2370422277537aa8349--celebrated-sunburst-4e2aa7.netlify.app/calendar";
-const CLIENT_LOGIN_SERVER = "https://62d1d2370422277537aa8349--celebrated-sunburst-4e2aa7.netlify.app";
-const CLIENT_CORS_SERVER  = "https://62d1d2370422277537aa8349--celebrated-sunburst-4e2aa7.netlify.app"
+const CLIENT_URL_SERVER = "https://62d1e7b935667d0d6471567a--celebrated-sunburst-4e2aa7.netlify.app/calendar";
+const CLIENT_LOGIN_SERVER = "https://62d1e7b935667d0d6471567a--celebrated-sunburst-4e2aa7.netlify.app";
+const CLIENT_CORS_SERVER  = "https://62d1e7b935667d0d6471567a--celebrated-sunburst-4e2aa7.netlify.app"
 
 dotenv.config();
 
