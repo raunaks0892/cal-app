@@ -13,8 +13,9 @@ const port = "3004";
 const CLIENT_URL = "http://localhost:3000/calendar";
 const CLIENT_LOGIN = "http://localhost:3000";
 
-const CLIENT_URL_SERVER = "https://euphonious-moxie-85a4ff.netlify.app/calendar";
-const CLIENT_LOGIN_SERVER = "https://euphonious-moxie-85a4ff.netlify.app";
+
+const CLIENT_URL_SERVER = "https://celebrated-sunburst-4e2aa7.netlify.app/calendar";
+const CLIENT_LOGIN_SERVER = "https://celebrated-sunburst-4e2aa7.netlify.app";
 
 dotenv.config();
 
@@ -37,7 +38,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(cors(
     {
-    origin: ["http://localhost:3000", "https://euphonious-moxie-85a4ff.netlify.app"],
+    origin: ["http://localhost:3000", "https://celebrated-sunburst-4e2aa7.netlify.app"],
     method: "GET,POST,PUT,DELETE",
     credentials: true
 }
