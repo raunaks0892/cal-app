@@ -13,8 +13,8 @@ const port = "3004";
 const CLIENT_URL = "http://localhost:3000/calendar";
 const CLIENT_LOGIN = "http://localhost:3000";
 
-const CLIENT_URL_SERVER = "https://lively-otter-b22b3d.netlify.app/calendar";
-const CLIENT_LOGIN_SERVER = "https://lively-otter-b22b3d.netlify.app";
+const CLIENT_URL_SERVER = "https://frolicking-kangaroo-fdfbb6.netlify.app/calendar";
+const CLIENT_LOGIN_SERVER = "https://frolicking-kangaroo-fdfbb6.netlify.app";
 
 dotenv.config();
 
@@ -37,7 +37,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(cors(
     {
-    origin: ["http://localhost:3000", "https://lively-otter-b22b3d.netlify.app"],
+    origin: ["http://localhost:3000", "https://frolicking-kangaroo-fdfbb6.netlify.app"],
     method: "GET,POST,PUT,DELETE",
     credentials: true
 }
@@ -90,7 +90,7 @@ app.get("/login/failed",(req,res)=>{
     });
 })
 
-app.get("/logout",(req,res)=>{
+app.get("/auth/logout",(req,res)=>{
     req.logOut();
     //res.redirect(CLIENT_LOGIN);
     res.redirect(CLIENT_LOGIN_SERVER);
