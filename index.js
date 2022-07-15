@@ -14,8 +14,8 @@ const CLIENT_URL = "http://localhost:3000/calendar";
 const CLIENT_LOGIN = "http://localhost:3000";
 
 
-const CLIENT_URL_SERVER = "https://celebrated-sunburst-4e2aa7.netlify.app/calendar";
-const CLIENT_LOGIN_SERVER = "https://celebrated-sunburst-4e2aa7.netlify.app";
+const CLIENT_URL_SERVER = "https://62d1d2370422277537aa8349--celebrated-sunburst-4e2aa7.netlify.app/calendar";
+const CLIENT_LOGIN_SERVER = "https://62d1d2370422277537aa8349--celebrated-sunburst-4e2aa7.netlify.app";
 
 dotenv.config();
 
@@ -38,7 +38,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(cors(
     {
-    origin: ["http://localhost:3000", "https://celebrated-sunburst-4e2aa7.netlify.app"],
+    origin: ["http://localhost:3000", "https://62d1d2370422277537aa8349--celebrated-sunburst-4e2aa7.netlify.app"],
     method: "GET,POST,PUT,DELETE",
     credentials: true
 }
