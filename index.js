@@ -13,8 +13,8 @@ const port = "3004";
 const CLIENT_URL = "http://localhost:3000/calendar";
 const CLIENT_LOGIN = "http://localhost:3000";
 
-const CLIENT_URL_SERVER = "https://frolicking-kangaroo-fdfbb6.netlify.app/calendar";
-const CLIENT_LOGIN_SERVER = "https://frolicking-kangaroo-fdfbb6.netlify.app";
+const CLIENT_URL_SERVER = "https://euphonious-moxie-85a4ff.netlify.app/calendar";
+const CLIENT_LOGIN_SERVER = "https://euphonious-moxie-85a4ff.netlify.app";
 
 dotenv.config();
 
