@@ -37,7 +37,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(cors(
     {
-    origin: ["http://localhost:3000", "https://frolicking-kangaroo-fdfbb6.netlify.app"],
+    origin: ["http://localhost:3000", "https://euphonious-moxie-85a4ff.netlify.app"],
     method: "GET,POST,PUT,DELETE",
     credentials: true
 }
