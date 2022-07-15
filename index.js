@@ -1,5 +1,5 @@
-//const cookieSession = require("express-session")
-const cookieSession = require("cookie-session");
+const cookieSession = require("express-session")
+//const cookieSession = require("cookie-session");
 const passport = require("passport");
 const passportSetup = require("./passport");    
 const cors = require("cors");
@@ -12,10 +12,12 @@ const port = "3004";
 
 const CLIENT_URL = "http://localhost:3000/calendar";
 const CLIENT_LOGIN = "http://localhost:3000";
+const CLIENT_CORS = "http://localhost:3000";
 
 
 const CLIENT_URL_SERVER = "https://62d1d2370422277537aa8349--celebrated-sunburst-4e2aa7.netlify.app/calendar";
 const CLIENT_LOGIN_SERVER = "https://62d1d2370422277537aa8349--celebrated-sunburst-4e2aa7.netlify.app";
+const CLIENT_CORS_SERVER  = "https://62d1d2370422277537aa8349--celebrated-sunburst-4e2aa7.netlify.app"
 
 dotenv.config();
 
@@ -23,24 +25,37 @@ console.log('hello');
 
 app.set("trust proxy", 1);
 
-app.use(cookieSession(
-    {
-        name:"session",
-        keys: ['calendar'],
-        maxAge: (24*60*60*1000)*7,//one week
+app.use(
+    session({
+      secret: "secretcode",
+      resave: true,
+      saveUninitialized: true,
+      cookie: {
         sameSite: "none",
-        secure: true
+        secure: true,
+        maxAge: 1000 * 60 * 60 * 24 * 7 // One Week
+      }
+    }))
+
+// app.use(cookieSession(
+//     {
+//         name:"session",
+//         keys: ['calendar'],
+//         maxAge: (24*60*60*1000)*7,//one week
+//         sameSite: "none",
+//         secure: true
         
-    }
-))
+//     }
+// ))
 
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(cors(
     {
-    origin: ["http://localhost:3000", "https://62d1d2370422277537aa8349--celebrated-sunburst-4e2aa7.netlify.app"],
+    origin: CLIENT_CORS_SERVER,
     method: "GET,POST,PUT,DELETE",
     credentials: true
+   
 }
 // ,
 // {
