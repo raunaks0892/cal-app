@@ -1,0 +1,11 @@
+{
+    "credData": {
+        "mode": "SERVER",
+        "CLIENT_URL_SERVER": "https://celebrated-sunburst-4e2aa7.netlify.app/calendar",
+        "CLIENT_LOGIN_SERVER": "https://celebrated-sunburst-4e2aa7.netlify.app",
+        "CLIENT_CORS_SERVER": "https://celebrated-sunburst-4e2aa7.netlify.app",
+        "CLIENT_URL_LOCAL": "http://localhost:3000/calendar",
+        "CLIENT_LOGIN_LOCAL": "http://localhost:3000",
+        "CLIENT_CORS_LOCAL": "http://localhost:3000"
+    }
+}
